@@ -28,7 +28,7 @@ router.post("/updateDirDetails", async (req, res) => {
 		await Dir.updateOne(
 			{ dirPath: req.body.dirPath },
 			{
-				$push: {
+				$set: {
 					dirData: details,
 				},
 			}
